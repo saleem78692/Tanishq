@@ -22,8 +22,28 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.letter {
+    display: inline-block;
+}
+
 body {
     background-color: var(--color-grey7);
+}
+
+body::selection {
+    background-color: var(--primary-color);
+    color: var(--color-grey1);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+    border-right: 2px solid var(--color-grey1);
 }
 
 /* HEADER */
@@ -291,7 +311,7 @@ input[type="search"] {
 }
 
 .content-type a:hover::after {
-    transform: scaleX(1);
+    transform: scaleX(1.2);
 }
 
 /* CLOSE BUTTON */
@@ -1040,3 +1060,84 @@ swiper-slide video {
     }
 
 }
+
+
+/* footer  */
+#footer{
+    background:#5b0000;
+    padding:60px 0 20px;
+    color:white;
+    position:relative;
+    overflow: hidden;
+}
+
+/* center curve */
+#footer::before{
+    content:"";
+    position:absolute;
+    top:-16px;
+    left:50%;
+    transform:translateX(-50%);
+    width:30px;
+    height:30px;
+    background:var(--color-grey1); 
+    transform: rotate(45deg);
+}
+#footer::after{
+    content:"";
+    position:absolute;
+    bottom:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:30px;
+    height:30px;
+    background:var(--color-grey1); 
+    /* background-color: blue; */
+    transform: rotate(45deg);
+}
+
+.footer-logo img{
+    width:140px;
+}
+
+.footer-title{
+    font-size:22px;
+    margin-bottom:15px;
+    font-weight:500;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.footer-box a:hover{
+    color:#d8b4a0;
+}
+
+.footer-text{
+    font-size:16px;
+}
+
+.qr-code{
+    width:200px;
+}
+
+.social-icons{
+    display:flex;
+    gap:25px;
+    font-size:22px;
+}
+
+.social-icons i{
+    cursor:pointer;
+}
+
+.copyright{
+    font-size:14px;
+    opacity:0.8;
+}
+
