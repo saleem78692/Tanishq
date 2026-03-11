@@ -297,3 +297,110 @@ background:#8b2a2a;
 color:white;
 border:none;
 }
+
+#Filter-Collection{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+
+#Tanishq-Assurance-design{
+    width:100%;
+    background-color: var(--color-grey1);
+    padding:60px 0;
+}
+
+.back-border{
+    background-image:url("../images/All-Jewellery/assurance-union-border.webp");
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius:20px;
+    padding-bottom:40px;
+}
+
+.assurance-title{
+    font-size:38px;
+    font-weight:600;
+}
+
+.assurance-subtitle{
+    font-size:18px;
+    opacity:0.7;
+}
+
+/* Cards */
+.assurance-box{
+    padding:39.5px 20px;
+}
+
+.assurance-card{
+    padding:30px 15px;
+    transition:0.3s;
+    border-radius:12px;
+}
+
+.assurance-card img{
+    width:65px;
+    margin-bottom:15px;
+}
+
+.assurance-card p{
+    font-size:18px;
+    font-weight:500;
+}
+
+.assurance-card:hover{
+    background:white;
+    transform:translateY(-6px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+@media(max-width:991px){
+
+.assurance-box{
+    padding:5px 10px;
+}
+.assurance-title{
+    font-size:30px;
+}
+.assurance-card{
+    padding: 0;
+}
+
+.assurance-card img{
+    width:55px;
+}
+
+.assurance-card p{
+    font-size:16px;
+}
+
+}
+
+@media(max-width:576px){
+
+#Tanishq-Assurance-design{
+    padding:40px 0;
+}
+
+.assurance-title{
+    font-size:24px;
+}
+
+.assurance-subtitle{
+    font-size:14px;
+}
+
+.assurance-card{
+    padding:20px 10px;
+}
+
+.assurance-card img{
+    width:45px;
+}
+
+.assurance-card p{
+    font-size:14px;
+}
+
+}
+
