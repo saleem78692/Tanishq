@@ -17,6 +17,7 @@
 
 <body>
     <div class="container-fluid m-0 p-0">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-arrow-up-circle"></i></button>
 
         <!-- First Header  -->
         <header class="header">
@@ -57,7 +58,9 @@
                             <a href="#"><i class="bi bi-bag-heart"></i></a>
                             <a href="#"><i class="bi bi-heart"></i></a>
                             <a href="#"><i class="bi bi-cart"></i></a>
-                            <a href="#"><i class="bi bi-person"></i></a>
+                            <!-- <a href="#"><i class="bi bi-person"></i></a> -->
+                            <a class="a" onclick="document.getElementById('id01').style.display='flex'"
+                                style="cursor: pointer;"><i class="bi bi-person"></i></a>
                         </div>
 
                     </div>
@@ -886,6 +889,71 @@
                 </div>
         </footer>
 
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate">
+
+                <div class="modal-wrapper">
+
+                    <!-- LEFT SIDE -->
+                    <div class="offer-side">
+
+                        <div class="offer-card">
+
+                            <div class="offer-banner">
+                                <p>On your first order get</p>
+                                <h2>₹500 off</h2>
+                            </div>
+
+                            <h3>And other benefits</h3>
+
+                            <div class="benefits">
+                                <span>Encircle & Tata Neu coins</span>
+                                <span>Unlock wishlist</span>
+                                <span>Personalized shopping</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- RIGHT SIDE -->
+                    <div class="login-side">
+
+                        <span onclick="document.getElementById('id01').style.display='none'"
+                            class="close">&times;</span>
+
+                        <h1>Welcome to Tanishq!</h1>
+                        <p>Login/Signup to get exclusive Tanishq privileges</p>
+
+                        <div class="mobile-box">
+
+                            <div class="flag">
+                                <img src="https://flagcdn.com/w40/in.png">
+                            </div>
+
+                            <input type="text" placeholder="Enter mobile number">
+
+                            <button>Request OTP</button>
+
+                        </div>
+
+                        <p class="terms">
+                            By continuing, I agree to
+                            <a href="#">Terms of Use</a> &
+                            <a href="#">Privacy Policy</a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-element-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
@@ -923,6 +991,41 @@
             loop: true,
             loopDelay: 1000
         });
+
+
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        // -----------------------------------------------------------------
+
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // --------------------------------------------------------------------------------------
     </script>
 </body>
 
