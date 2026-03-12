@@ -404,3 +404,25 @@ border:none;
 
 }
 
+#Brand-description{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+.brand-border{
+    border: 2px solid var(--primary-color);
+    padding: 20px;
+}
+.brand-border h2, .brand-border h4{
+    color: var(--primary-color);
+}
+.back-border p{
+    text-align: justify;
+}
+.brand-border p > a{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
