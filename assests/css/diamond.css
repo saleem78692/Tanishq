@@ -1,0 +1,140 @@
+/* Diamond.html ka CSS hai  */
+
+#All-Jewellery-bg {
+    position: relative;
+    width: 100%;
+    min-height: 50vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+#All-Jewellery-bg::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.content-area {
+    position: relative;
+    z-index: 2;
+}
+
+.jewellery-card {
+    padding: 20px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.jewellery-card img {
+    max-width: 80px;
+    transition: 0.4s;
+}
+
+.jewellery-card h5 {
+    color: white;
+    margin-top: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.jewellery-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.jewellery-card:hover img {
+    transform: scale(1.15);
+}
+
+.content-pagination {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 15px;
+}
+
+.content-pagination a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.content-pagination a.active {
+    color: #ffcc66;
+    font-weight: 500;
+}
+
+.content-pagination i {
+    color: white;
+    margin: 0 6px;
+}
+
+/* Desktop */
+.jewellery-card img{
+    max-width:80px;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+
+    .content-area{
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+
+    .jewellery-card{
+        padding:15px;
+    }
+
+    .jewellery-card img{
+        max-width:70px;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 576px){
+
+    #All-Jewellery-bg{
+        min-height:60vh;
+    }
+
+    .jewellery-card{
+        padding:12px;
+    }
+
+    .jewellery-card img{
+        max-width:60px;
+    }
+
+    .jewellery-card h5{
+        font-size:14px;
+    }
+
+    .content-pagination{
+        font-size:13px;
+        bottom:15px;
+    }
+
+}
