@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANISHQ - Shopping</title>
+    <link rel="icon" href="assests/images/icon-logo-head.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assests/css/shopping.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+
+        <!-- First Header  -->
+        <header class="header">
+            <div class="row m-0">
+                <div class="col-12 p-0">
+
+
+                    <div class="navbar">
+
+                        <div class="res-tab">
+                            <div class="humburger" id="burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="res-logo">
+                                <img src="assests/images/res-logo.png" height="35" alt="">
+                            </div>
+                        </div>
+
+                        <div class="logo">
+                            <img src="assests/images/logo.svg" class="logo-tan" height="45" alt="">
+                        </div>
+
+                        <div class="search-area">
+                            <i class="bi bi-search"></i>
+                            <input type="search" class="search" placeholder="Search for products...">
+
+                            <div class="search-icons">
+                                <a href="#"><i class="bi bi-camera"></i></a>
+                                <a href="#"><i class="bi bi-mic"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="icon">
+                            <a href="#" class="diamond"><i class="bi bi-gem"></i></a>
+                            <a href="#"><i class="bi bi-bag-heart"></i></a>
+                            <a href="#"><i class="bi bi-heart"></i></a>
+                            <a href="#"><i class="bi bi-cart"></i></a>
+                            <!-- <a href="#"><i class="bi bi-person"></i></a> -->
+                            <a class="a" onclick="document.getElementById('id01').style.display='flex'"
+                                style="cursor: pointer;"><i class="bi bi-person"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- serch header  -->
+                <div class="row m-0 search-header">
+                    <div class="col-12">
+                        <div class="search-content">
+                            <input type="search" class="search-bar" placeholder="Search here...">
+
+                            <div class="search-icons">
+                                <a href="#"><i class="bi bi-camera"></i></a>
+                                <a href="#"><i class="bi bi-mic"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Secound Header  -->
+        <header class="header-content" id="sidebar">
+            <!-- Close Button -->
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-12 d-flex justify-content-between content-type header-content-type">
+                        <a href="All-Jewellery.html" class="nav-link">
+                            <img src="assests/images/all-jewellery-l1.svg" height="20px" alt="">
+                            All Jewellery
+                        </a>
+                        <a href="Gold.html" class="nav-link">
+                            <img src="assests/images/gold-l1.svg" height="20px" alt="">
+                            Gold
+                        </a>
+                        <a href="Diamond.html" class="nav-link">
+                            <img src="assests/images/diamond-l1.svg" height="20px" alt="">
+                            Diamond
+                        </a>
+                        <a href="Earring.html" class="nav-link">
+                            <img src="assests/images/earrings-l1.svg" height="20px" alt="">
+                            Earring
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/rings-l1.svg" height="20px" alt="">
+                            Rings
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/dailywear-l1.svg" height="20px" alt="">
+                            Daily Wear
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/collection-l1.svg" height="20px" alt="">
+                            Collection
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/wedding-l1.svg" height="20px" alt="">
+                            Wedding
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/gifting-l1.svg" height="20px" alt="">
+                            Gifting
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/tanishq-logo-more-updated.svg" height="20px" alt="">
+                            More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section id="first-1">
+            <div class="container">
+                <div class="d-flex gap-3 p-5">
+                    <div><a href="index.html" class="nav-link">Home</a></div>
+                    <div>/</div>
+                    <div><a href="Shopping.html" class="nav-link text-danger">Shop</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="filter-1">
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-12 mt-5">
+                        <p class="title">
+                            All Shop <span>(28595 Results)</span>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row m-0 align-items-center filter-bar">
+
+                    <div class="col-lg-9 col-md-12 filter-left">
+
+                        <button class="filter-select" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">Filter <i
+                                class="bi bi-chevron-down"></i></button>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="shopping-card">
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="product-card">
+
+                            <!-- Image Section -->
+                            <div class="img-box">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480" class="img default-img">
+                                <img src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw407375d1/images/hi-res/50D5L1SEDABA29_2.jpg?sw=480&sh=480" class="img hover-img">
+
+                                <!-- Wishlist -->
+                                <div class="wishlist"><i class="bi bi-heart-fill"></i></div>
+
+                                <!-- Hover Icons -->
+                                <div class="icons">
+                                    <button><a href="Jewellery-details.html"><i class="bi bi-eye"></i></a></button>
+                                    <button><a href="#"><i class="bi bi-cart"></i></a></button>
+                                </div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="content">
+                                <h3>Bloom Arc Diamond Stu Earring</h3>
+                                <p class="price">
+                                    ₹64099 <span>₹70000</span>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer id="footer">
+            <div class="container">
+
+                <!-- Logo -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer-logo">
+                            <img src="assests/images/tanishq-footer-full-logo-final.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer Content -->
+                <div class="row mt-4">
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-box text-center">
+                            <!-- <p class="footer-title">Download the Tanishq App Now</p> -->
+                            <img src="assests/images/tanishq-app-QR-code-updated.svg" class="qr-code">
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-box">
+                            <p class="footer-title">Useful Links</p>
+
+                            <a href="#">Delivery Information</a>
+                            <a href="#">International Shipping</a>
+                            <a href="#">Payment Options</a>
+                            <a href="#">Track your Order</a>
+                            <a href="#">Returns</a>
+                            <a href="#">Find a Store</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-box">
+                            <p class="footer-title">Information</p>
+
+                            <a href="#">Blog</a>
+                            <a href="#">Offers & Contest Details</a>
+                            <a href="#">Help & FAQs</a>
+                            <a href="#">About Tanishq</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="footer-box">
+                            <p class="footer-title">Contact Us</p>
+
+                            <p class="footer-text">1800-266-0123</p>
+
+                            <p class="footer-title mt-3">Chat With Us</p>
+                            <p class="footer-text">+91 8147349242</p>
+
+                            <hr>
+
+                            <div class="social-icons">
+                                <i class="bi bi-whatsapp"></i>
+                                <i class="bi bi-envelope"></i>
+                                <i class="bi bi-chat-dots"></i>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row text-center mt-4">
+                        <p class="copyright">
+                            © 2026 Titan Company Limited. All Rights Reserved | Designed by Tssg-Tech
+                        </p>
+                    </div>
+
+                </div>
+        </footer>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-center" id="offcanvasExampleLabel">Filter By</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="filter-box">
+
+
+
+                    <div class="filter-content">
+
+                        <!-- Price -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Price</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+
+                                <div class="price-tags">
+                                    <button>&lt; ₹25,000</button>
+                                    <button>₹25,000 - ₹50,000</button>
+                                    <button>₹50,000 - ₹1,00,000</button>
+                                    <button>₹1,00,000+</button>
+                                </div>
+
+                                <p class="info-text">
+                                    For multiple filter selection, use the range input below
+                                </p>
+
+                                <div class="price-range">
+                                    <input type="text" placeholder="₹ Min Val">
+                                    <span>TO</span>
+                                    <input type="text" placeholder="₹ Max Val">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Jewellery Type -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Jewellery Type</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Diamond Jewellery</button>
+                                    <button>Gold Jewellery</button>
+                                    <button>Silver Jewellery</button>
+                                    <button>Plain Jewellery With Stone</button>
+                                    <button>Platinum Jewellery</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Product</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Anklet</button>
+                                    <button>Bangale</button>
+                                    <button>Bracelate</button>
+                                    <button>Chain</button>
+                                    <button>Earring</button>
+                                    <button>Finger Ring</button>
+                                    <button>Haram</button>
+                                    <button>Jewellery Set</button>
+                                    <button>Kada</button>
+                                    <button>Maang Tika</button>
+                                    <button>Mangalsutra</button>
+                                    <button>Mangalsutra Set</button>
+                                    <button>Nackless</button>
+                                    <button>Nackless Set</button>
+                                    <button>Nose Pin </button>
+                                    <button>Others</button>
+                                    <button>Pandant</button>
+                                    <button>Pandant Earning Set</button>
+                                    <button>Pandant Earning Chain</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Brand</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>MIA</button>
+                                    <button>Tanishq</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gender -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Gender</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Kids</button>
+                                    <button>Men</button>
+                                    <button>Women</button>
+                                    <button>Unisex</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Purity -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Purity</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>14</button>
+                                    <button>18</button>
+                                    <button>22</button>
+                                    <button>95</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Occasion -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Occasion</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bridal Wear</button>
+                                    <button>Causual Wear</button>
+                                    <button>Classic</button>
+                                    <button>Engagement</button>
+                                    <button>Ethinic and Triditional</button>
+                                    <button>Everyday</button>
+                                    <button>Everyday/Engagement</button>
+                                    <button>Everyday/WorkWear</button>
+                                    <button>Everyday/WorkWear/Party</button>
+                                    <button>Everyday/WorkWear/Engagement</button>
+                                    <button>Modern</button>
+                                    <button>Modern Wear</button>
+                                    <button>Office Wear</button>
+                                    <button>party</button>
+                                    <button>party/Classic</button>
+                                    <button>party/Engagement</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metel -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Metel</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Gold</button>
+                                    <button>Platinum</button>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Diamond Clarity -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Gender</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>B,I1 I2</button>
+                                    <button>FL</button>
+                                    <button>I1</button>
+                                    <button>I1/I2</button>
+                                    <button>I1 I2</button>
+                                    <button>I1-I2</button>
+                                    <button>I2</button>
+                                    <button>I3</button>
+                                    <button>Mixed</button>
+                                    <button>SI</button>
+                                    <button>SI,SI1</button>
+                                    <button>SI1</button>
+                                    <button>SI1,SI2</button>
+                                    <button>SI1-SI2</button>
+                                    <button>SI1-SI2, VS1</button>
+                                    <button>SI1-SI2, VS2</button>
+                                    <button>SI2</button>
+                                    <button>SI2 VS</button>
+                                    <button>VS</button>
+                                    <button>VS, VS1</button>
+                                    <button>VS, VS2</button>
+                                    <button>VS1</button>
+                                    <button>VS2</button>
+                                    <button>VS-VS1</button>
+                                    <button>VS-VS2</button>
+                                    <button>VS-VVS2</button>
+                                    <button>VVS</button>
+                                    <button>VVS-VS</button>
+                                    <button>VVS1</button>
+                                    <button>VVS1, VVS2</button>
+                                    <button>VVS2</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Collection -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Collection</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>22Kt Range</button>
+                                    <button>Abahon</button>
+                                    <button>Aheli</button>
+                                    <button>Aarambh</button>
+                                    <button>Aarna</button>
+                                    <button>A Chain Story</button>
+                                    <button>A Fine Finish</button>
+                                    <button>Agalyam</button>
+                                    <button>Akshayam</button>
+                                    <button>Alekhya</button>
+                                    <button>Alphabet Pendents</button>
+                                    <button>Aamara</button>
+                                    <button>Arpanam</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Community -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Community</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Type -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Type</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Metel Color -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Metel Color</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Virtual Try On -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Virtual Try On</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Design -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Design</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Length -->
+                        <div class="filter-item">
+                            <div class="filter-title">
+                                <span>Length</span>
+                                <span class="arrow">⌄</span>
+                            </div>
+
+                            <div class="filter-dropdown">
+                                <div class="price-tags">
+                                    <button>Bangali</button>
+                                    <button>Bihari</button>
+                                    <button>Classic Must Have</button>
+                                    <button>Gujrati</button>
+                                    <button>Indian Bridal</button>
+                                    <button>Kunnada</button>
+                                    <button>Maharastrian</button>
+                                    <button>Marwari</button>
+                                    <button>North Indian</button>
+                                    <button>Panjabi</button>
+                                    <button>South Indian</button>
+                                    <button>Tamil</button>
+                                    <button>Telgu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-footer">
+                        <button class="clear-btn">Clear Filters →</button>
+                        <button class="result-btn">Show Result (28,595) →</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const burger = document.getElementById("burger");
+        const sidebar = document.getElementById("sidebar");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Open
+        burger.addEventListener("click", function () {
+            sidebar.classList.add("active");
+        });
+
+        // Close
+        closeBtn.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+        });
+
+        document.querySelectorAll(".filter-title").forEach(title => {
+            title.addEventListener("click", function () {
+
+                let dropdown = this.nextElementSibling
+
+                document.querySelectorAll(".filter-dropdown").forEach(d => {
+                    if (d !== dropdown) {
+                        d.classList.remove("active")
+                    }
+                })
+
+                dropdown.classList.toggle("active")
+
+            })
+        })
+
+
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+</body>
+
+</html>

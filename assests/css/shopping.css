@@ -1,0 +1,270 @@
+:root {
+    --primary-color: #772022;
+    --swiper-theme-color: #007aff;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue: #0070d2;
+    --color-green: #1fa042;
+    --color-primary: #00a1e0;
+    --color-red: #c00;
+    --color-success: var(--color-green);
+    --color-danger: var(--color-red);
+    --color-light-blue: #7ed0ee;
+    --color-grey1: #f9f9f9;
+    --color-grey2: #eee;
+    --color-grey3: #ccc;
+    --color-grey4: #999;
+    --color-grey5: #666;
+    --color-grey6: #444;
+    --color-grey7: #222;
+    --color-grey8: #333;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+#first-1{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+    border-bottom: 2px solid var(--color-grey3);
+
+}
+#filter-1{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+#filter-1 .title {
+    font-size: 32px;
+    font-weight: 700;
+}
+#filter-1 .title span{
+     font-size: 18px;
+    color: #777;
+}
+.filter-select {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* Filter Side bar menu  */
+
+.filter-box {
+    background: #f5f5f5;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.filter-content {
+    background: white;
+    border-radius: 20px;
+    padding: 15px;
+    max-height: auto;
+    overflow-y: auto;
+}
+
+.filter-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.filter-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.filter-dropdown {
+    display: none;
+    padding-top: 15px;
+    transition: 0.8s all ease;
+}
+
+.filter-dropdown.active {
+    display: block;
+
+}
+
+.price-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.price-tags button {
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+}
+
+.info-text {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.price-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-range input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.filter-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.clear-btn {
+    flex: 1;
+    padding: 4px;
+    border-radius: 30px;
+    border: 1px solid #8b2a2a;
+    background: transparent;
+    color: #8b2a2a;
+}
+
+.result-btn {
+    flex: 1;
+    padding: 4px;
+    border-radius: 30px;
+    background: #8b2a2a;
+    color: white;
+    border: none;
+}
+
+/* =============================================== */
+
+#shopping-card{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+.product-card {
+  width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f6f6f6;
+  margin: 50px auto;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.img-box {
+  position: relative;
+  background: #9aa9b5;
+  height: 300px;
+  overflow: hidden;
+}
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: 0.4s;
+}
+
+.hover-img {
+  opacity: 0;
+}
+.product-card:hover .hover-img {
+  opacity: 1;
+}
+
+.product-card:hover .default-img {
+  opacity: 0;
+}
+.wishlist {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--color-grey2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.icons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* SHOW ON HOVER */
+.product-card:hover .icons {
+  opacity: 1;
+}
+
+/* ICON STYLE */
+.icons button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icons button a i{
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-size: 25px;
+}
+.icons button:hover {
+  background: transparent;
+}
+
+/* CONTENT */
+.content {
+  padding: 20px;
+  text-align: center;
+}
+
+.content h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.price span {
+  color: gray;
+  text-decoration: line-through;
+  margin-left: 10px;
+}
