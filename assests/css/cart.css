@@ -1,0 +1,133 @@
+:root {
+    --primary-color: #772022;
+    --swiper-theme-color: #007aff;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-blue: #0070d2;
+    --color-green: #1fa042;
+    --color-primary: #00a1e0;
+    --color-red: #c00;
+    --color-success: var(--color-green);
+    --color-danger: var(--color-red);
+    --color-light-blue: #7ed0ee;
+    --color-grey1: #f9f9f9;
+    --color-grey2: #eee;
+    --color-grey3: #ccc;
+    --color-grey4: #999;
+    --color-grey5: #666;
+    --color-grey6: #444;
+    --color-grey7: #222;
+    --color-grey8: #333;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+#empty-bag{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+.empty-heading{
+    color: var(--primary-color);
+}
+.button-1{
+    padding: 10px 20px 10px 20px;
+    background-color: var(--color-grey2);
+    color: var(--color-black);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+}
+.button-1:hover{
+    box-shadow: 0px 0px 30px var(--primary-color);
+    transition: 0.5s all;
+}
+.button-2{
+    padding: 10px 20px 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--color-grey1);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+.button-2:hover{
+    box-shadow: 0px 0px 30px var(--primary-color);
+    transition: 0.5s all;
+    border: 1px solid var(--color-grey1);
+}
+#booking{
+    height: auto;
+    width: 100%;
+    background-color: var(--color-grey1);
+}
+.cart{
+     height: auto;
+     width: 100%;
+     border: 1px solid var(--color-grey3);
+     padding: 20px;
+     margin-top: 30px;
+
+}
+.wishlist-button{
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-black);
+}
+.button-update{
+     padding: 5px 10px 5px 10px;
+    background-color: var(--color-grey1);
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+    border-radius: 5px;
+    font-size: 18px;
+}
+.button-update:hover{
+    background-color: var(--primary-color);
+    color: var(--color-grey1);
+    transition: 0.5s all;
+}
+.pay-button{
+    width: 100%;
+    background-color: var(--primary-color);
+
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+.pay-button a{
+        text-decoration: none;
+    color: var(--color-grey1);
+}
+
+@media(max-width:600px)
+{
+    .button-1{
+        width: 100%;
+        display: block;
+    }
+    .button-2{
+        width: 100%;
+        display: block;
+        margin-top: 20px;
+    }
+    .img-default-img{
+        height: 100px;
+    }
+    .text-r{
+        font-size: 10px !important;
+    }
+    .text-s{
+        font-size: 15px !important;
+    }
+    .text-t{
+          font-size: 13px !important;  
+        }
+}
