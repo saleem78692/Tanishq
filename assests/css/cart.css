@@ -109,6 +109,9 @@
 
 @media(max-width:600px)
 {
+    .cart{
+        padding: 10px;
+    }
     .button-1{
         width: 100%;
         display: block;

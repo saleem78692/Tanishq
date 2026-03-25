@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANISHQ - Shopping</title>
+    <link rel="icon" href="assests/images/icon-logo-head.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assests/css/cart.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+
+</head>
+
+<body>
+    <div class="container-fluid m-0 p-0">
+
+        <!-- First Header  -->
+        <header class="header">
+            <div class="row m-0">
+                <div class="col-12 p-0">
+
+
+                    <div class="navbar">
+
+                        <div class="res-tab">
+                            <div class="humburger" id="burger">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="res-logo">
+                                <img src="assests/images/res-logo.png" height="35" alt="">
+                            </div>
+                        </div>
+
+                        <div class="logo">
+                            <img src="assests/images/logo.svg" class="logo-tan" height="45" alt="">
+                        </div>
+
+                        <div class="search-area">
+                            <i class="bi bi-search"></i>
+                            <input type="search" class="search" placeholder="Search for products...">
+
+                            <div class="search-icons">
+                                <a href="#"><i class="bi bi-camera"></i></a>
+                                <a href="#"><i class="bi bi-mic"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="icon">
+                            <a href="#" class="diamond"><i class="bi bi-gem"></i></a>
+                            <a href="#"><i class="bi bi-bag-heart"></i></a>
+                            <a href="#"><i class="bi bi-heart"></i></a>
+                            <a href="#"><i class="bi bi-cart"></i></a>
+                            <!-- <a href="#"><i class="bi bi-person"></i></a> -->
+                            <a class="a" onclick="document.getElementById('id01').style.display='flex'"
+                                style="cursor: pointer;"><i class="bi bi-person"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- serch header  -->
+                <div class="row m-0 search-header">
+                    <div class="col-12">
+                        <div class="search-content">
+                            <input type="search" class="search-bar" placeholder="Search here...">
+
+                            <div class="search-icons">
+                                <a href="#"><i class="bi bi-camera"></i></a>
+                                <a href="#"><i class="bi bi-mic"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Secound Header  -->
+        <header class="header-content" id="sidebar">
+            <!-- Close Button -->
+            <div class="close-btn" id="closeBtn">&times;</div>
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-12 d-flex justify-content-between content-type header-content-type">
+                        <a href="All-Jewellery.html" class="nav-link">
+                            <img src="assests/images/all-jewellery-l1.svg" height="20px" alt="">
+                            All Jewellery
+                        </a>
+                        <a href="Gold.html" class="nav-link">
+                            <img src="assests/images/gold-l1.svg" height="20px" alt="">
+                            Gold
+                        </a>
+                        <a href="Diamond.html" class="nav-link">
+                            <img src="assests/images/diamond-l1.svg" height="20px" alt="">
+                            Diamond
+                        </a>
+                        <a href="Earring.html" class="nav-link">
+                            <img src="assests/images/earrings-l1.svg" height="20px" alt="">
+                            Earring
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/rings-l1.svg" height="20px" alt="">
+                            Rings
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/dailywear-l1.svg" height="20px" alt="">
+                            Daily Wear
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/collection-l1.svg" height="20px" alt="">
+                            Collection
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/wedding-l1.svg" height="20px" alt="">
+                            Wedding
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/gifting-l1.svg" height="20px" alt="">
+                            Gifting
+                        </a>
+                        <a href="#" class="nav-link">
+                            <img src="assests/images/tanishq-logo-more-updated.svg" height="20px" alt="">
+                            More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+
+        <section id="booking">
+            <div class="container">
+                <div class="row m-0">
+                    <div class="col-12 text-center mt-5">
+                        <h1>CHECKOUT</h1>
+                    </div>
+                </div>
+                <div class="row m-0">
+                    <div class="col-lg-8 col-md-12 col-12">
+
+                        <div class="cart" style="background-color: white;">
+                            <div class="row m-0">
+                                <div class="col-12">
+                                    <p class="fs-3 fw-bold">Shipping Information</p>
+                                    <form action="">
+                                        <div class="d-flex gap-3">
+                                            <div class="w-50"><input type="text" placeholder="Full Name"
+                                                    class="form-control p-2"></div>
+                                            <div class="w-50"><input type="tel" placeholder="Phone Number"
+                                                    class="form-control p-2"></div>
+                                        </div>
+                                        <div class="d-flex gap-3 mt-3">
+                                            <div class="w-50"><input type="text" placeholder="Email Address"
+                                                    class="form-control p-2"></div>
+                                            <div class="w-50"><input type="text" placeholder="Pin Code"
+                                                    class="form-control p-2"></div>
+                                        </div>
+                                        <div class="d-flex gap-3 mt-3">
+                                            <div class="w-50"><input type="text" placeholder="City"
+                                                    class="form-control p-2"></div>
+                                            <div class="w-50"><input type="text" placeholder="state"
+                                                    class="form-control p-2"></div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <div><textarea name="" id="" placeholder="Full Address"
+                                                    class="form-control"></textarea></div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="cart" style="background-color: white;">
+                            <p class="fs-3 fw-bold">Your items</p>
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row m-0 mt-3">
+                                <div class="col-6 d-flex gap-3">
+                                    <div class="item-1">
+                                        <div><img
+                                                src="https://www.tanishq.co.in/dw/image/v2/BKCK_PRD/on/demandware.static/-/Sites-Tanishq-product-catalog/default/dw0c32e305/images/hi-res/50D5L1SEDABA29_1.jpg?sw=480&sh=480"
+                                                height="100px" class="img-default-img">
+                                        </div>
+                                    </div>
+                                    <div class="item-2">
+
+                                        <p class="fs-5 fw-bold text-r">Bloom Arc Diamond</p>
+
+                                        <p style="opacity: 0.8;" class="text-s">22kt | Diamond</p>
+
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="float-end">
+                                        <div class="fw-bold">₹70000</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-12 col-12">
+
+                        <div class="cart" style="background-color: white;">
+                            <div>
+                                <p class="fw-bold fs-3 text-s">COUPANS</p>
+                                <form action="">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div style="width: 100%;"> <input type="text" placeholder="Enter Coupan code"
+                                                class="form-control"></div>
+                                        <div><button class="button-update"
+                                                style="padding: 2px 5px 5px 5px;">Apply</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p style="opacity: 0.8;">View coupon and gift card</p>
+                            </div>
+                        </div>
+
+                        <div class="cart" style="line-height: 20px; background-color: white;">
+                            <div>
+                                <p class="fw-bold fs-3 text-s">Payment Method</p>
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="radio" class="form-input" name="payment-method">
+                                    <label for="" class="form-label"> Case on Delivery</label>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="radio" class="form-input" name="payment-method">
+                                    <label for="" class="form-label"> Credit/Debit card</label>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="radio" class="form-input" name="payment-method">
+                                    <label for="" class="form-label"> UPI Payment</label>
+                                </div>
+
+                                <div class="d-flex align-items-center gap-3">
+                                    <input type="radio" class="form-input" name="payment-method">
+                                    <label for="" class="form-label"> Net Banking</label>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="cart" style="background-color: white;">
+                            <div>
+                                <p class="fw-bold fs-3 text-s">Order Summery</p>
+                                <p class="float-end">₹70000</p>
+                                <p>Item Total</p>
+
+                                <p class="float-end">Free</p>
+                                <p>Shipping</p>
+
+                                <p class="float-end">-₹0</p>
+                                <p>Discount</p>
+                                <hr>
+                                <p class="float-end fw-bold">₹70000</p>
+                                <p class="fw-bold">Grand Total</p>
+
+                            </div>
+                            <div class="pay-button">
+                                <a href="#">Place Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+    </section>
+
+
+    <div style="height: 50px; width: 100%; background-color: #f9f9f9;"></div>
+
+
+    <footer id="footer">
+        <div class="container">
+
+            <!-- Logo -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-logo">
+                        <img src="assests/images/tanishq-footer-full-logo-final.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Content -->
+            <div class="row mt-4">
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-box text-center">
+                        <!-- <p class="footer-title">Download the Tanishq App Now</p> -->
+                        <img src="assests/images/tanishq-app-QR-code-updated.svg" class="qr-code">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <p class="footer-title">Useful Links</p>
+
+                        <a href="#">Delivery Information</a>
+                        <a href="#">International Shipping</a>
+                        <a href="#">Payment Options</a>
+                        <a href="#">Track your Order</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Find a Store</a>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <p class="footer-title">Information</p>
+
+                        <a href="#">Blog</a>
+                        <a href="#">Offers & Contest Details</a>
+                        <a href="#">Help & FAQs</a>
+                        <a href="#">About Tanishq</a>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="footer-box">
+                        <p class="footer-title">Contact Us</p>
+
+                        <p class="footer-text">1800-266-0123</p>
+
+                        <p class="footer-title mt-3">Chat With Us</p>
+                        <p class="footer-text">+91 8147349242</p>
+
+                        <hr>
+
+                        <div class="social-icons">
+                            <i class="bi bi-whatsapp"></i>
+                            <i class="bi bi-envelope"></i>
+                            <i class="bi bi-chat-dots"></i>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row text-center mt-4">
+                    <p class="copyright">
+                        © 2026 Titan Company Limited. All Rights Reserved | Designed by Tssg-Tech
+                    </p>
+                </div>
+
+            </div>
+    </footer>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const burger = document.getElementById("burger");
+        const sidebar = document.getElementById("sidebar");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Open
+        burger.addEventListener("click", function () {
+            sidebar.classList.add("active");
+        });
+
+        // Close
+        closeBtn.addEventListener("click", function () {
+            sidebar.classList.remove("active");
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>
