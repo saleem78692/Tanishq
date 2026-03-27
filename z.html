@@ -1,166 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Grid Design</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-color: #f4f6f9;
-      padding: 40px;
-    }
-
-    /* Grid Layout */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 25px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    /* Product Card Styling */
-    .product-card {
-      background-color: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .product-card:hover {
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-      transform: translateY(-5px);
-    }
-
-    /* Image Container */
-    .image-container {
-      position: relative;
-      width: 100%;
-      height: 280px;
-      background-color: #e5e9ec; /* Fallback background */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    /* Placeholder Image styling (Replace src with your actual images) */
-    .image-container img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-
-    /* Top Right Wishlist Icon */
-    .wishlist-btn {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      width: 36px;
-      height: 36px;
-      background-color: #0c5e25; /* Dark Green */
-      color: #ffffff;
-      border-radius: 50%;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      cursor: pointer;
-      z-index: 2;
-      transition: background-color 0.2s;
-    }
-
-    .wishlist-btn:hover {
-      background-color: #08421a;
-    }
-
-    /* Hover Action Buttons (Eye & Cart) */
-    .hover-actions {
-      position: absolute;
-      bottom: 25px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 15px;
-      opacity: 0; /* Hidden by default */
-      transition: opacity 0.3s ease;
-      z-index: 2;
-    }
-
-    /* Magic Hover Interaction */
-    .product-card:hover .hover-actions {
-      opacity: 1; /* Shows up on hover */
-    }
-
-    .action-btn {
-      width: 42px;
-      height: 42px;
-      background-color: #1a1a1a; /* Almost Black */
-      color: #ffffff;
-      border-radius: 50%;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.2s, transform 0.2s;
-    }
-
-    .action-btn:hover {
-      background-color: #333333;
-      transform: scale(1.05);
-    }
-
-    /* Product Info Section */
-    .product-info {
-      padding: 20px 15px;
-      text-align: center;
-    }
-
-    .product-title {
-      font-size: 15px;
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 8px;
-    }
-
-    .price-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .current-price {
-      font-size: 16px;
-      font-weight: 700;
-      color: #000;
-    }
-
-    .original-price {
-      font-size: 14px;
-      color: #999;
-      text-decoration: line-through;
-    }
-  </style>
-</head>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <body>
 
- 
+<div class="w3-container">
+  <h2>W3.CSS Modal</h2>
+  <p>Use w3-container classes to create different sections in the modal (e.g. header & footer).</p>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
 
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-teal"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Modal Header</h2>
+      </header>
+      <div class="w3-container">
+        <p>Some text..</p>
+        <p>Some text..</p>
+      </div>
+      <footer class="w3-container w3-teal">
+        <p>Modal Footer</p>
+      </footer>
+    </div>
+  </div>
+</div>
+            
 </body>
 </html>

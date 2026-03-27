@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TANISHQ - Shopping</title>
+
     <link rel="icon" href="assests/images/icon-logo-head.png">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <!-- icon -->
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Your CSS -->
     <link rel="stylesheet" href="assests/css/dashboard.css">
     <link rel="stylesheet" href="assests/css/style.css">
-
 </head>
 
 <body style="background-color: white;">
+
     <div class="container-fluid m-0 p-0">
         <section id="dashboard-design">
+
             <!-- BUTTON -->
             <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
 
@@ -34,11 +41,12 @@
                     <li><a href="user-profile.html" class="nav-link"><i class="bi bi-person"></i> Profile</a></li>
                     <li><a href="User-order.html" class="nav-link"><i class="bi bi-box"></i> Orders</a></li>
                     <li><a href="User-wishlist.html" class="nav-link"><i class="bi bi-heart"></i> Wishlist</a></li>
-                    <li><a href="User-address.html" class="nav-link active-1"><i class="bi bi-geo-alt"></i> Address</a></li>
-                    <li><a href="#" class="nav-link"><i class="bi bi-arrow-counterclockwise"></i> Return Product</a>
+                    <li><a href="User-address.html" class="nav-link active-1"><i class="bi bi-geo-alt"></i> Address</a>
                     </li>
-                    <li><a href="#" class="nav-link"><i class="bi bi-box2"></i> Track Product</a></li>
-                    <li><a href="#" class="nav-link"><i class="bi bi-gear"></i> Settings</a></li>
+                    <li><a href="User-Return.html" class="nav-link"><i class="bi bi-arrow-counterclockwise"></i> Return Product</a>
+                    </li>
+                    <li><a href="User-Track.html" class="nav-link"><i class="bi bi-box2"></i> Track Product</a></li>
+                    <li><a href="User-Setting.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a></li>
                     <li><a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
                 </ul>
             </aside>
@@ -53,49 +61,114 @@
                     </div>
                 </div>
 
-                 <div class="cards">
-                    <div class="card">
-                        <i class="bi bi-bag-heart-fill"></i>
-                        <h2>10</h2>
-                        <p>Total Orders</p>
+                <div class="row m-0">
+
+                    <!-- Address 1 -->
+                    <div class="col-lg-4">
+                        <div class="address-card">
+                            <button class="float-end btn btn-dark btn-sm">Home</button>
+                            <div class="fw-bold">Mo Saleem</div>
+                            <p><i class="bi bi-telephone"></i> +91 9137497814</p>
+                            <p>Sector 10, Lucknow Uttar Pradesh India 272194</p>
+                            <button class="btn btn-success"><i class="bi bi-pencil"></i> Edit</button>
+                            <button class="btn btn-danger"><i class="bi bi-trash"></i> Delete</button>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <i class="bi bi-heart"></i>
-                        <h2>5</h2>
-                        <p>Wishlist</p>
+                    <!-- Address 2 -->
+                    <div class="col-lg-4">
+                        <div class="address-card">
+                            <button class="float-end btn btn-dark btn-sm">Office</button>
+                            <div class="fw-bold">Mo Saleem</div>
+                            <p><i class="bi bi-telephone"></i> +91 9137497814</p>
+                            <p>Sector 10, Lucknow Uttar Pradesh India 272194</p>
+                            <button class="btn btn-success"><i class="bi bi-pencil"></i> Edit</button>
+                            <button class="btn btn-danger"><i class="bi bi-trash"></i> Delete</button>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <i class="bi bi-ticket-detailed-fill"></i>
-                        <h2>2</h2>
-                        <p>Coupons</p>
+                    <!-- Add Address -->
+                    <div class="col-lg-4" style="padding: 10px;">
+                        <div class="address-card-1 d-flex justify-content-center align-items-center">
+
+                            <!-- CUSTOM BUTTON -->
+                            <button id="openModalBtn" class="btn btn-danger" style="background-color: brown;">
+                                <i class="bi bi-plus-circle"></i>
+                            </button>
+                            <p>Add New Address</p>
+                        </div>
                     </div>
 
-                    <div class="card">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <h2>1</h2>
-                        <p>Saved Address</p>
-                    </div>
                 </div>
             </div>
 
         </section>
-
-
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- MODAL -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Address</h5>
+                    <button type="button" class="btn-close"></button>
+                </div>
+
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-3" placeholder="Full Name">
+                    <input type="text" class="form-control mb-3" placeholder="Phone Number">
+                    <textarea class="form-control mb-3" rows="3" placeholder="Full Address"></textarea>
+                    <input type="text" class="form-control mb-3" placeholder="Enter City">
+                    <input type="text" class="form-control mb-3" placeholder="Enter Pin Code">
+                    <input type="text" class="form-control mb-3" placeholder="Enter State">
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary">Close</button>
+                    <button class="btn btn-primary" style="background-color: brown; border: none;">Save Address</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS -->
     <script>
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("active");
             document.querySelector(".overlay").classList.toggle("active");
         }
 
+        /* CUSTOM MODAL TOGGLE */
+        const modal = document.getElementById("exampleModal");
+        const openBtn = document.getElementById("openModalBtn");
+        const closeBtns = modal.querySelectorAll(".btn-close, .btn-secondary");
 
+        // OPEN
+        openBtn.addEventListener("click", () => {
+            modal.style.display = "block";
+            modal.classList.add("show");
+        });
 
+        // CLOSE
+        closeBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                modal.style.display = "none";
+                modal.classList.remove("show");
+            });
+        });
+
+        // CLOSE ON OUTSIDE CLICK
+        window.addEventListener("click", (e) => {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                modal.classList.remove("show");
+            }
+        });
     </script>
+
 </body>
 
 </html>

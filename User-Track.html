@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANISHQ - Shopping</title>
+    <link rel="icon" href="assests/images/icon-logo-head.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assests/css/dashboard.css">
+    <link rel="stylesheet" href="assests/css/style.css">
+
+</head>
+
+<body style="background-color: white;">
+    <div class="container-fluid m-0 p-0">
+        <section id="dashboard-design">
+            <!-- BUTTON -->
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+
+            <!-- OVERLAY -->
+            <div class="overlay" onclick="toggleSidebar()"></div>
+
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+                <div class="profile">
+                    <img src="assests/images/jewellery-care-guide.webp">
+                    <h3>Mo Saleem</h3>
+                </div>
+
+                <ul>
+                    <li><a href="user-profile.html" class="nav-link"><i class="bi bi-person"></i> Profile</a>
+                    </li>
+                    <li><a href="User-order.html" class="nav-link"><i class="bi bi-box"></i> Orders</a></li>
+                    <li><a href="User-wishlist.html" class="nav-link"><i class="bi bi-heart"></i> Wishlist</a></li>
+                    <li><a href="User-address.html" class="nav-link"><i class="bi bi-geo-alt"></i> Address</a></li>
+                    <li><a href="User-Return.html" class="nav-link"><i class="bi bi-arrow-counterclockwise"></i> Return
+                            Product</a>
+                    </li>
+                    <li><a href="User-Track.html" class="nav-link active-1"><i class="bi bi-box2"></i> Track Product</a></li>
+                    <li><a href="User-Setting.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a></li>
+                    <li><a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                </ul>
+            </aside>
+
+            <!-- CONTENT -->
+            <div class="content">
+
+                <h1 class="text-center"><i class="bi bi-arrow-counterclockwise"></i> Return Product</h1>
+
+                <div class="container py-5">
+
+                    <div class="search-container">
+                        <div class="input-group mb-3 shadow-sm rounded">
+                            <input type="text" class="form-control border-0 p-3" placeholder="Enter Order ID"
+                                value="BRX202406">
+                            <button class="btn btn-track" type="button">
+                                <i class="bi bi-search me-2"></i>Track
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card order-card p-4 p-md-5 mx-auto" style="max-width: 900px;">
+
+                        <div class="d-flex justify-content-between align-items-start mb-4">
+                            <div>
+                                <h3 class="fw-bold mb-1">Order #BRX202406</h3>
+                                <p class="text-muted mb-0 small">
+                                    <i class="bi bi-calendar3 me-2"></i>Placed on 10 March 2026
+                                </p>
+                            </div>
+                            <span class="badge-shipped fw-semibold">
+                                <i class="bi bi-truck me-2"></i>Shipped
+                            </span>
+                        </div>
+
+                        <div class="d-flex align-items-center py-3 border-bottom border-top">
+                            <img src="assests/images/floral-bloom.webp"
+                                alt="Product" class="product-img me-3">
+                            <div>
+                                <h6 class="fw-bold mb-1">Flooral Bloom</h6>
+                                <p class="text-muted small mb-1">Diamond</p>
+                                <h6 class="fw-bold mb-0">₹70,000</h6>
+                            </div>
+                        </div>
+
+                        <div class="stepper-wrapper">
+                            <div class="stepper-item completed">
+                                <div class="step-counter"><i class="bi bi-bag-check text-white"></i></div>
+                                <div class="step-name">Order Placed</div>
+                            </div>
+                            <div class="stepper-item active">
+                                <div class="step-counter"><i class="bi bi-box-seam text-white"></i></div>
+                                <div class="step-name">Shipped</div>
+                            </div>
+                            <div class="stepper-item">
+                                <div class="step-counter"><i class="bi bi-truck"></i></div>
+                                <div class="step-name">Out for Delivery</div>
+                            </div>
+                            <div class="stepper-item">
+                                <div class="step-counter"><i class="bi bi-house-check"></i></div>
+                                <div class="step-name">Delivered</div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mt-4">
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <div class="info-title"><i class="bi bi-clock-history info-icon"></i>Estimated
+                                        Delivery</div>
+                                    <p class="fw-bold mb-0">12 March 2026</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box">
+                                    <div class="info-title"><i class="bi bi-geo-alt info-icon"></i>Shipping Address
+                                    </div>
+                                    <p class="fw-medium mb-0">Sector 10, Lucknow Utter Predesh India 2372194</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.querySelector(".overlay").classList.toggle("active");
+        }
+
+
+
+    </script>
+</body>
+
+</html>
