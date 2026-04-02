@@ -526,6 +526,9 @@ ul li {
 
 /* MOBILE */
 @media (max-width: 600px) {
+    .text-h{
+        font-size: 22px !important;
+    }
   .card-2 {
     padding: 40px 20px;
   }

@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="assests/css/Jewellery-Details.css">
 </head>
 
-<body>
+<body style="background-color: #fff;">
     <div class="container-fluid m-0 p-0">
 
         <!-- First Header  -->
@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5 col-md-5 order-3">
+                <div class="col-lg-5 col-md-5 order-3 p-4">
                     <!-- RIGHT CONTENT -->
                     <div>
                         <h2>Bloom Arc Diamond Stud Earring</h2>
@@ -295,7 +295,7 @@
             </div>
         </section>
 
-
+        <!-- Shopping Card  -->
         <section id="shopping-card">
             <div class="container">
                 <div class="row m-0">
@@ -427,8 +427,96 @@
             </div>
         </section>
 
+        <!-- Reviews and Feedback -->
+        <section id="reviews-section" class="container my-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="mb-4 text-center fw-bold" style="color: var(--primary-color);">Reviews & Feedback</h2>
+
+                    <div class="average-rating text-center mb-5">
+                        <h3>4.5 <i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-fill text-warning"></i><i class="bi bi-star-half text-warning"></i></h3>
+                        <p>Based on 786 reviews</p>
+                    </div>
+
+                    <!-- Reviews List -->
+                    <div class="reviews-list">
+                        <div class="review-item mb-4 p-4 border rounded">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5>Priya S.</h5>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="mb-2">"Absolutely stunning earrings! The diamond sparkle is breathtaking. Perfect for everyday elegance."</p>
+                            <small class="text-muted">Verified Purchase - 2 weeks ago</small>
+                        </div>
+
+                        <div class="review-item mb-4 p-4 border rounded">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5>Rahul K.</h5>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="mb-2">"Gift for my wife. She loves it! Quality is top-notch, Tanishq never disappoints."</p>
+                            <small class="text-muted">Verified Purchase - 1 month ago</small>
+                        </div>
+
+                        <div class="review-item mb-4 p-4 border rounded">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h5>Anita M.</h5>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                            </div>
+                            <p class="mb-2">"Comfortable to wear all day. Beautiful design and excellent craftsmanship."</p>
+                            <small class="text-muted">Verified Purchase - 3 weeks ago</small>
+                        </div>
+                    </div>
+
+                    <!-- Add Review Form -->
+                    <div class="add-review mt-5 p-4 border rounded">
+                        <h4 class="mb-4">Add Your Review</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="reviewerName" class="form-label fw-bold">Your Name <span class="text-danger fs-5">*</span></label>
+                                <input type="text" class="form-control" id="reviewerName" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Your Rating <span class="text-danger fs-5">*</span></label>
+                                <div class="rating-stars d-flex gap-2">
+                                    <i class="bi bi-star-fill rating-star fs-3" data-rating="1"></i>
+                                    <i class="bi bi-star-fill rating-star fs-3" data-rating="2"></i>
+                                    <i class="bi bi-star-fill rating-star fs-3" data-rating="3"></i>
+                                    <i class="bi bi-star-fill rating-star fs-3" data-rating="4"></i>
+                                    <i class="bi bi-star-fill rating-star fs-3" data-rating="5"></i>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reviewComment" class="form-label fw-bold">Your Review <span class="text-danger fs-5">*</span></label>
+                                <textarea class="form-control" id="reviewComment" rows="4" placeholder="Please share your honest feedback about the product/service." required></textarea>
+                            </div>
+                            <button type="submit" class="btn add-review-btn">Submit Review</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer id="footer">
+
             <div class="container">
 
                 <!-- Logo -->
@@ -531,6 +619,30 @@
         function changeImage(el) {
             document.getElementById("mainImg").src = el.src;
         }
+
+        // Star Rating Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const stars = document.querySelectorAll('.rating-star');
+            let currentRating = 0;
+
+            stars.forEach(star => {
+                star.addEventListener('click', function() {
+                    currentRating = parseInt(this.dataset.rating);
+                    updateStars();
+                });
+            });
+
+
+            function updateStars() {
+                stars.forEach((star, index) => {
+                    if (index < currentRating) {
+                        star.classList.add('active');
+                    } else {
+                        star.classList.remove('active');
+                    }
+                });
+            }
+        });
 
     </script>
 </body>
