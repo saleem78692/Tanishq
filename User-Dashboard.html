@@ -4,147 +4,440 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TANISHQ - Shopping</title>
+    <title>TANISHQ - Dashboard</title>
     <link rel="icon" href="assests/images/icon-logo-head.png">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
-    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="assests/css/dashboard.css">
-    <link rel="stylesheet" href="assests/css/style.css">
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+         :root {
+            --primary-color: #772022;
+            /* Tanishq Maroon */
+            --accent-gold: #c5a059;
+            --bg-soft: #fcfaf8;
+            --glass: rgba(255, 255, 255, 0.8);
+            --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 40px rgba(119, 32, 34, 0.1);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        :root {
+            --primary-maroon: #772022;
+            --gold-accent: #c5a059;
+            --soft-gold: #fdf8ef;
+            --charcoal: #2d2d2d;
+            --muted: #8e8e8e;
+            --glass: rgba(255, 255, 255, 0.98);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background-color: #fcfcfc;
+            font-family: 'Inter', sans-serif;
+            color: var(--charcoal);
+            margin: 0;
+            padding-top: 70px;
+        }
+
+        /* --- HEADER --- */
+        .header {
+            background: var(--glass);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 12px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1100;
+        }
+
+        .navbar-custom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .search-area {
+            background: #f0f0f0;
+            border-radius: 50px;
+            padding: 8px 20px;
+            width: 300px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-area input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            margin-left: 10px;
+            font-size: 0.85rem;
+        }
+
+        /* --- SIDEBAR REFINED & SCROLLABLE --- */
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: #ffffff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 85px;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1050;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .sidebar .profile {
+            text-align: center;
+            margin-bottom: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar .profile img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 2px solid var(--gold-accent);
+            object-fit: cover;
+            padding: 3px;
+            background: #fff;
+        }
+
+        .sidebar ul {
+            padding: 0 15px 40px 15px;
+            list-style: none;
+        }
+
+        .sidebar ul li a {
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 12px;
+            margin-bottom: 4px;
+            transition: var(--transition);
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active-1 {
+            background: var(--soft-gold);
+            color: var(--primary-maroon);
+        }
+
+        .sidebar ul li a.active-1 {
+            background: var(--primary-maroon);
+            color: #fff !important;
+        }
+
+        /* --- CONTENT AREA --- */
+       /* --- CONTENT & CARDS --- */
+        .content {
+            margin-left: 280px;
+            padding: 40px;
+            transition: var(--transition);
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            margin-bottom: 30px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border: none;
+            border-radius: 24px;
+            padding: 30px 20px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid rgba(119, 32, 34, 0.03);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent-gold);
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        /* --- RECENT ACTIVITIES --- */
+        .activity {
+            margin-top: 50px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .activity h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border-radius: 20px;
+            background: var(--bg-soft);
+            border: 1px solid transparent;
+            transition: var(--transition);
+            margin-bottom: 15px;
+        }
+
+        .item:hover {
+            background: #fff;
+            border-color: var(--accent-gold);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            margin-right: 20px;
+        }
+
+        .text-j {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .btn-delete {
+            background: #fff0f0;
+            color: #ff4d4d;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            transition: var(--transition);
+        }
+
+        .btn-delete:hover {
+            background: #ff4d4d;
+            color: #fff;
+        }
+
+        /* --- MOBILE OVERRIDES --- */
+        @media (max-width: 992px) {
+            .tab-menu-res{
+                display: none;
+            }
+            .sidebar {
+                transform: translateX(-100%);
+                padding-top: 100px;
+            }
+
+            .sidebar.active {
+                transform: translateX(0);
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 20px 15px 100px 15px;
+            }
+
+            .bottom-nav {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background: #fff;
+                display: flex;
+                justify-content: space-around;
+                padding: 12px 0;
+                border-top: 1px solid #eee;
+                z-index: 1100;
+            }
+        }
+
+        /* .bottom-nav { display: none; } */
+
+        .bottom-nav-item {
+            text-align: center;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+        }
+
+        .bottom-nav-item.active {
+            color: var(--primary-maroon);
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(4px);
+            z-index: 1045;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
 </head>
 
-<body style="background-color: white;">
-    <div class="container-fluid m-0 p-0">
-        <section id="dashboard-design">
-            <!-- BUTTON -->
-            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+<body>
 
-            <!-- OVERLAY -->
-            <div class="overlay" onclick="toggleSidebar()"></div>
+    <div class="overlay" onclick="toggleSidebar()"></div>
 
-            <!-- SIDEBAR -->
-            <aside class="sidebar" id="sidebar">
-                <div class="profile">
-                    <img src="assests/images/jewellery-care-guide.webp">
-                    <h3>Mo Saleem</h3>
-                </div>
-
-                <ul>
-                    <li><a href="user-profile.html" class="nav-link"><i class="bi bi-person"></i> Profile</a></li>
-                    <li><a href="User-order.html" class="nav-link"><i class="bi bi-box"></i> Orders</a></li>
-                    <li><a href="User-wishlist.html" class="nav-link"><i class="bi bi-heart"></i> Wishlist</a></li>
-                    <li><a href="User-address.html" class="nav-link"><i class="bi bi-geo-alt"></i> Address</a></li>
-                    <li><a href="User-Return.html" class="nav-link"><i class="bi bi-arrow-counterclockwise"></i> Return Product</a>
-                    </li>
-                    <li><a href="User-Track.html" class="nav-link"><i class="bi bi-box2"></i> Track Product</a></li>
-                    <li><a href="User-Setting.html" class="nav-link"><i class="bi bi-gear"></i> Settings</a></li>
-                    <li><a href="index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-                </ul>
-            </aside>
-
-            <!-- CONTENT -->
-            <div class="content">
-
-                <h1 class="text-center">Dashboard Overview</h1>
-
-                <div class="cards">
-                    <div class="card">
-                        <i class="bi bi-bag-heart-fill"></i>
-                        <h2>10</h2>
-                        <p>Total Orders</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="bi bi-heart"></i>
-                        <h2>5</h2>
-                        <p>Wishlist</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="bi bi-ticket-detailed-fill"></i>
-                        <h2>2</h2>
-                        <p>Coupons</p>
-                    </div>
-
-                    <div class="card">
-                        <i class="bi bi-geo-alt-fill"></i>
-                        <h2>1</h2>
-                        <p>Saved Address</p>
-                    </div>
-                </div>
-
-                <div class="activity">
-                    <h2 class="text-center p-2">Recent Activities</h2>
-
-                    <div class="row m-0">
-                        <div class="col-6">
-                            <div class="item">
-                                <img src="assests/images/gifting.webp">
-                                <div>
-                                    <p class="fs-5 fw-bold text-j">Gifting Jewellary</p>
-                                    <p class="text-q">22kt | Gold | QTY: 1</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-6">
-                            <button class="float-end border-0" onclick="(alert('Are you sure delete ?'))"><i class="bi bi-trash3"></i></button>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row m-0">
-                        <div class="col-6">
-                            <div class="item">
-                                <img src="assests/images/gifting.webp">
-                                <div>
-                                    <p class="fs-5 fw-bold text-j">Gifting Jewellary</p>
-                                    <p class="text-q">22kt | Gold | QTY: 1</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-6">
-                            <button class="float-end border-0" onclick="(alert('Are you sure delete ?'))"><i class="bi bi-trash3"></i></button>
-                        </div>
-                    </div>
-
-                    <hr>
-                    <div class="row m-0">
-                        <div class="col-6">
-                            <div class="item">
-                                <img src="assests/images/gifting.webp">
-                                <div>
-                                    <p class="fs-5 fw-bold text-j">Gifting Jewellary</p>
-                                    <p class="text-q">22kt | Gold | QTY: 1</p>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="col-6">
-                            <button class="float-end border-0" onclick="(alert('Are you sure delete ?'))"><i class="bi bi-trash3"></i></button>
-                        </div>
-                    </div>
-
-                </div>
-
+    <header class="header">
+        <div class="navbar-custom">
+            <div class="d-flex align-items-center">
+                <button class="btn d-lg-none me-2" onclick="toggleSidebar()">
+                    <i class="bi bi-list fs-3"></i>
+                </button>
+                <img src="assests/images/logo.svg" height="30" alt="Tanishq">
             </div>
 
-        </section>
+            <div class="search-area d-none d-lg-flex">
+                <i class="bi bi-search"></i>
+                <input type="search" placeholder="Search jewellery...">
+            </div>
 
+            <div class="d-flex gap-3 align-items-center">
+                <a href="#" class="text-dark d-none d-md-block"><i class="bi bi-heart fs-5"></i></a>
+                <a href="#" class="text-dark"><i class="bi bi-cart fs-5"></i></a>
+                <a href="user-profile.html" class="text-dark"><i class="bi bi-person-circle fs-5"></i></a>
+            </div>
+        </div>
+    </header>
 
+    <aside class="sidebar" id="sidebar">
+        <div class="profile">
+            <img src="assests/images/jewellery-care-guide.webp" alt="User">
+            <h5 class="mt-2 fw-bold mb-0">Mo Saleem</h5>
+            <span class="badge rounded-pill bg-light text-dark border mt-1">Elite Member</span>
+        </div>
+        <ul>
+            <div class="tab-menu-res">
+                <li><a href="user-profile.html" class="active-1"><i class="bi bi-person"></i> Profile</a></li>
+                <li><a href="User-order.html"><i class="bi bi-box"></i> Orders</a></li>
+                <li><a href="User-wishlist.html"><i class="bi bi-heart"></i> Wishlist</a></li>
+            </div>
+            <li><a href="User-address.html"><i class="bi bi-geo-alt"></i> Address</a></li>
+            <li><a href="User-Track.html"><i class="bi bi-box2"></i> Track Product</a></li>
+            <li><a href="User-Return.html"><i class="bi bi-arrow-return-left"></i> Return Product</a></li>
+            <li><a href="User-Setting.html"><i class="bi bi-gear"></i> Settings</a></li>
+            <li><a href="index.html" class="text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        </ul>
+    </aside>
 
-    </div>
+    <main class="content">
+        <div class="page-header">
+            <h1>Dashboard Overview</h1>
+        </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <div class="cards">
+            <div class="card text-center">
+                <i class="bi bi-bag-check-fill"></i>
+                <h2>10</h2>
+                <p class="text-muted">Total Orders</p>
+            </div>
+            <div class="card text-center">
+                <i class="bi bi-heart-fill"></i>
+                <h2>5</h2>
+                <p class="text-muted">Wishlist Items</p>
+            </div>
+            <div class="card text-center">
+                <i class="bi bi-ticket-perforated-fill"></i>
+                <h2>2</h2>
+                <p class="text-muted">Available Coupons</p>
+            </div>
+            <div class="card text-center">
+                <i class="bi bi-geo-alt-fill"></i>
+                <h2>1</h2>
+                <p class="text-muted">Saved Address</p>
+            </div>
+        </div>
+
+        <div class="activity">
+            <h2>Recent Activities</h2>
+
+            <div class="item row align-items-center g-0">
+                <div class="col-auto">
+                    <img src="assests/images/gifting.webp" alt="Jewellery">
+                </div>
+                <div class="col">
+                    <h5 class="text-j mb-1">Gifting Jewellery</h5>
+                    <p class="text-muted mb-0 small">22kt | Gold | QTY: 1</p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn-delete" onclick="confirm('Are you sure?')"><i class="bi bi-trash3"></i></button>
+                </div>
+            </div>
+
+            <div class="item row align-items-center g-0">
+                <div class="col-auto">
+                    <img src="assests/images/gifting.webp" alt="Jewellery">
+                </div>
+                <div class="col">
+                    <h5 class="text-j mb-1">Gifting Jewellery</h5>
+                    <p class="text-muted mb-0 small">22kt | Gold | QTY: 1</p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn-delete" onclick="confirm('Are you sure?')"><i class="bi bi-trash3"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="User-Dashboard.html" class="bottom-nav-item active"><i class="bi bi-house"></i><br>Home</a>
+        <a href="User-order.html" class="bottom-nav-item"><i class="bi bi-box"></i><br>Orders</a>
+        <a href="User-wishlist.html" class="bottom-nav-item"><i class="bi bi-heart"></i><br>Wishlist</a>
+        <a href="user-profile.html" class="bottom-nav-item"><i class="bi bi-person"></i><br>Profile</a>
+    </nav>
+
     <script>
         function toggleSidebar() {
             document.getElementById("sidebar").classList.toggle("active");
             document.querySelector(".overlay").classList.toggle("active");
         }
-
-
-
     </script>
 </body>
 

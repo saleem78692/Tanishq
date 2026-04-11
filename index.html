@@ -28,10 +28,8 @@
                     <div class="navbar">
 
                         <div class="res-tab">
-                            <div class="humburger" id="burger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                            <div class="humburger active" id="burger">
+                                <img src="assests/images/menu.png" height="30px" alt="">
                             </div>
 
                             <div class="res-logo">
@@ -57,7 +55,7 @@
                             <a href="#" class="diamond"><i class="bi bi-gem"></i></a>
                             <a href="#"><i class="bi bi-bag-heart"></i></a>
                             <a href="#"><i class="bi bi-heart"></i></a>
-                            <a href="#"><i class="bi bi-cart"></i></a>
+                            <a href="cart.html"><i class="bi bi-cart"></i></a>
                             <!-- <a href="#"><i class="bi bi-person"></i></a> -->
                             <a class="a" onclick="document.getElementById('id01').style.display='flex'"
                                 style="cursor: pointer;"><i class="bi bi-person"></i></a>
@@ -437,15 +435,16 @@
                 <div class="row m-0">
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="tanishq-world-img">
-                            <a href="Everyday-Diamond.html"><img src="assests/images/tw-nt-wedding-desktop.webp" class="img-fluid"
-                                    alt=""></a>
+                            <a href="Everyday-Diamond.html"><img src="assests/images/tw-nt-wedding-desktop.webp"
+                                    class="img-fluid" alt=""></a>
                             <div class="card-overly">
                                 <p class="tanishq-world-text">Wedding</p>
                             </div>
 
                         </div>
                         <div class="tanishq-world-img mt-1">
-                            <a href="Everyday-Diamond.html"><img src="assests/images/tw-nt-gold-desktop.webp" class="img-fluid" alt=""></a>
+                            <a href="Everyday-Diamond.html"><img src="assests/images/tw-nt-gold-desktop.webp"
+                                    class="img-fluid" alt=""></a>
                             <div class="card-overly">
                                 <p class="tanishq-world-text">Gold</p>
                             </div>
@@ -454,15 +453,16 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="tanishq-world-img">
-                            <a href="Everyday-Diamond.html"><img src="assests/images/fod-diamond-desktop.webp" class="img-fluid" alt=""></a>
+                            <a href="Everyday-Diamond.html"><img src="assests/images/fod-diamond-desktop.webp"
+                                    class="img-fluid" alt=""></a>
                             <div class="card-overly">
                                 <p class="tanishq-world-text">Diamond</p>
                             </div>
 
                         </div>
                         <div class="tanishq-world-img mt-1">
-                            <a href="Everyday-Diamond.html"><img src="assests/images/ai-dailywear-desktop.webp" class="img-fluid"
-                                    alt=""></a>
+                            <a href="Everyday-Diamond.html"><img src="assests/images/ai-dailywear-desktop.webp"
+                                    class="img-fluid" alt=""></a>
                             <div class="card-overly">
                                 <p class="tanishq-world-text">DailyWear</p>
                             </div>
@@ -807,82 +807,137 @@
 
         <footer id="footer">
             <div class="container">
-
                 <!-- Logo -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-logo">
-                            <img src="assests/images/tanishq-footer-full-logo-final.svg" alt="">
+
                         </div>
                     </div>
                 </div>
 
-                <!-- Footer Content -->
-                <div class="row mt-4">
-
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                <!-- Main Content Row -->
+                <div class="row mt-5">
+                    <!-- App QR Column -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="footer-box text-center">
-                            <!-- <p class="footer-title">Download the Tanishq App Now</p> -->
-                            <img src="assests/images/tanishq-app-QR-code-updated.svg" class="qr-code">
+                            <img src="assests/images/tanishq-footer-full-logo-final.svg" alt="Tanishq Logo">
                         </div>
                     </div>
 
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- Useful Links Column -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="footer-box">
-                            <p class="footer-title">Useful Links</p>
-
-                            <a href="#">Delivery Information</a>
-                            <a href="#">International Shipping</a>
-                            <a href="#">Payment Options</a>
-                            <a href="#">Track your Order</a>
-                            <a href="#">Returns</a>
-                            <a href="#">Find a Store</a>
-
+                            <h5 class="footer-title mb-4 text-white">Useful Links</h5>
+                            <ul class="footer-links list-unstyled mb-0">
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-truck me-2"></i>Delivery Information</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-globe me-2"></i>International Shipping</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-credit-card me-2"></i>Payment Options</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-map me-2"></i>Track your Order</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-arrow-return-left me-2"></i>Returns</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-shop me-2"></i>Find a Store</a></li>
+                            </ul>
                         </div>
                     </div>
 
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- Information Column -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="footer-box">
-                            <p class="footer-title">Information</p>
-
-                            <a href="#">Blog</a>
-                            <a href="#">Offers & Contest Details</a>
-                            <a href="#">Help & FAQs</a>
-                            <a href="#">About Tanishq</a>
-
+                            <h5 class="footer-title mb-4 text-white">Information</h5>
+                            <ul class="footer-links list-unstyled mb-0">
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-journal me-2"></i>Blog</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-percent me-2"></i>Offers & Contests</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-question-circle me-2"></i>Help & FAQs</a></li>
+                                <li><a href="#" class="footer-link nav-link text-white mb-2"><i
+                                            class="bi bi-building me-2"></i>About Tanishq</a></li>
+                            </ul>
                         </div>
                     </div>
 
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
+                    <!-- Contact Column -->
+                    <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                         <div class="footer-box">
-                            <p class="footer-title">Contact Us</p>
-
-                            <p class="footer-text">1800-266-0123</p>
-
-                            <p class="footer-title mt-3">Chat With Us</p>
-                            <p class="footer-text">+91 8147349242</p>
-
-                            <hr>
-
-                            <div class="social-icons">
-                                <i class="bi bi-whatsapp"></i>
-                                <i class="bi bi-envelope"></i>
-                                <i class="bi bi-chat-dots"></i>
+                            <h5 class="footer-title mb-4 text-white">Contact Us</h5>
+                            <div class="contact-item mb-3">
+                                <i class="bi bi-telephone-fill text-warning me-2"></i>
+                                <strong class="footer-text text-white">1800-266-0123</strong>
                             </div>
-
+                            <div class="contact-item mb-4">
+                                <i class="bi bi-chat-fill text-success me-2"></i>
+                                <strong class="footer-text text-white">+91 8147349242</strong>
+                            </div>
+                            <hr class="my-3">
+                            <div class="social-icons">
+                                <a href="#" class="social-link me-3 text-white" title="WhatsApp"><i
+                                        class="bi bi-whatsapp fs-4"></i></a>
+                                <a href="#" class="social-link me-3 text-white" title="Email"><i
+                                        class="bi bi-envelope fs-4"></i></a>
+                                <a href="#" class="social-link text-white" title="Chat"><i
+                                        class="bi bi-chat-dots fs-4"></i></a>
+                            </div>
                         </div>
                     </div>
-                    <div class="row text-center mt-4">
-                        <p class="copyright">
-                            © 2026 Titan Company Limited. All Rights Reserved | Designed by Tssg-Tech
-                        </p>
-                    </div>
-
                 </div>
+
+                <!-- Newsletter Row -->
+                <div class="row mt-5">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="text-center mb-4">
+                            <h5 class="newsletter-title mb-3 text-white">Stay Connected</h5>
+                            <p class=" mb-0 text-white">Subscribe for updates, offers & more</p>
+                        </div>
+                        <form class="newsletter-form row g-2 align-items-center justify-content-center">
+                            <div class="col-md-8">
+                                <input type="email" class="form-control newsletter-input"
+                                    placeholder="Enter your email">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit"
+                                    class="btn btn-outline-light w-100 newsletter-btn">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Payment Methods Row -->
+                <div class="row mt-4 mb-4">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="payment-icons d-flex justify-content-center flex-wrap gap-3">
+                            <img src="assests/images/footer-visa.svg" alt="Visa" class="payment-icon" height="30">
+                            <img src="assests/images/footer-mastercard.svg" alt="Mastercard" class="payment-icon"
+                                height="30">
+                            <img src="assests/images/footer-americanexpress.svg" alt="American Express"
+                                class="payment-icon" height="30">
+                            <img src="assests/images/footer-paypal.svg" alt="PayPal" class="payment-icon" height="30">
+                            <img src="assests/images/footer-maestro.svg" alt="Maestro" class="payment-icon" height="30">
+                            <img src="assests/images/footer-dinnerclub.svg" alt="Dinner Club" class="payment-icon"
+                                height="30">
+                            <!-- <img src="assests/images/footer-ios.svg" alt="iOS" class="payment-icon" height="30">
+                            <img src="assests/images/footer-playstore.svg" alt="Play Store" class="payment-icon" height="30"> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Copyright Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center border-top pt-4">
+                            <p class="copyright mb-0 text-white">
+                                © 2026 Titan Company Limited. All Rights Reserved | Designed by Tssg-Tech
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
 
 
@@ -933,7 +988,7 @@
                             <div class="d-flex align-items-center">
                                 <span>+91 </span>
                                 <input type="text" placeholder="Enter mobile number">
-                                
+
                             </div>
 
                             <button>Request OTP</button>
@@ -962,16 +1017,28 @@
         const burger = document.getElementById("burger");
         const sidebar = document.getElementById("sidebar");
         const closeBtn = document.getElementById("closeBtn");
+        const body = document.body;
 
         // Open
         burger.addEventListener("click", function () {
             sidebar.classList.add("active");
+            body.classList.add("menu-open");
         });
 
         // Close
         closeBtn.addEventListener("click", function () {
             sidebar.classList.remove("active");
+            body.classList.remove("menu-open");
         });
+
+        // Close on outside click
+        sidebar.addEventListener("click", function (e) {
+            if (e.target === sidebar) {
+                sidebar.classList.remove("active");
+                body.classList.remove("menu-open");
+            }
+        });
+
 
 
         let text = document.querySelector("#text");

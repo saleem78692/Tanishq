@@ -209,6 +209,10 @@
   cursor: pointer;
   color: var(--primary-color);
 }
+.wishlist:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
 
 .icons {
   position: absolute;
