@@ -1,438 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TANISHQ - My Orders</title>
-  <link rel="icon" href="assests/images/icon-logo-head.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TANISHQ | Settings</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap');
+    <style>
+        :root {
+            --primary-maroon: #63191b;
+            --gold-accent: #b08d57;
+            --gold-light: #d4af37;
+            --gold-soft: #fdfaf4;
+            --bg-silk: #fcfbf7;
+            --glass-white: rgba(255, 255, 255, 0.85);
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --shadow-sm: 0 4px 20px rgba(0,0,0,0.04);
+            --shadow-lg: 0 15px 45px rgba(99, 25, 27, 0.08);
+        }
 
-    :root {
-      --primary-maroon: #772022;
-      --gold-accent: #c5a059;
-      --soft-gold: #fdf8ef;
-      --charcoal: #2d2d2d;
-      --muted: #8e8e8e;
-      --glass: rgba(255, 255, 255, 0.98);
-      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
+        body {
+            background-color: var(--bg-silk);
+            font-family: 'Inter', sans-serif;
+            color: #333;
+            margin: 0;
+            padding-top: 90px;
+            overflow-x: hidden;
+        }
 
-    body {
-      background-color: #fcfcfc;
-      font-family: 'Inter', sans-serif;
-      color: var(--charcoal);
-      margin: 0;
-      padding-top: 70px;
-      /* Space for fixed header */
-    }
+        /* --- Header Enhancements --- */
+        .luxury-header {
+            background: var(--glass-white);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(176, 141, 87, 0.15);
+            height: 85px;
+            z-index: 1100;
+            box-shadow: var(--shadow-sm);
+        }
 
-    /* --- HEADER --- */
-    .header {
-      background: var(--glass);
-      backdrop-filter: blur(15px);
-      border-bottom: 1px solid rgba(197, 160, 89, 0.2);
-      padding: 12px 0;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1100;
-    }
+        /* --- Sidebar Redesign --- */
+        .sidebar {
+            width: 300px;
+            height: 100vh;
+            background: #fff;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-top: 100px;
+            border-right: 1px solid rgba(176, 141, 87, 0.1);
+            z-index: 1000;
+            transition: var(--transition);
+        }
 
-    .navbar-custom {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 20px;
-    }
+        .profile-section {
+            padding: 30px 25px;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--gold-soft), transparent);
+            margin-bottom: 20px;
+        }
 
-    .search-area {
-      background: #f0f0f0;
-      border-radius: 50px;
-      padding: 8px 20px;
-      width: 300px;
-      display: flex;
-      align-items: center;
-    }
+        .profile img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(176, 141, 87, 0.3);
+            margin-bottom: 15px;
+            transition: var(--transition);
+        }
+        
+        .profile img:hover { transform: scale(1.05); }
 
-    .search-area input {
-      border: none;
-      background: transparent;
-      outline: none;
-      width: 100%;
-      margin-left: 10px;
-      font-size: 0.85rem;
-    }
+        .sidebar ul { list-style: none; padding: 0; }
 
-    /* --- SIDEBAR --- */
-    .sidebar {
-      width: 280px;
-      height: 100vh;
-      background: #fff;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding-top: 80px;
-      border-right: 1px solid #f0f0f0;
-      z-index: 1050;
-      transition: var(--transition);
-    }
+        .sidebar ul li a {
+            display: flex;
+            align-items: center;
+            padding: 14px 25px;
+            margin: 4px 20px;
+            border-radius: 12px;
+            color: #555;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
 
-    .sidebar .profile {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+        .sidebar ul li a i { 
+            margin-right: 15px; 
+            font-size: 1.2rem;
+            transition: var(--transition);
+        }
 
-    .sidebar .profile img {
-      width: 70px;
-      height: 70px;
-      border-radius: 50%;
-      border: 2px solid var(--gold-accent);
-      object-fit: cover;
-    }
+        .sidebar ul li a:hover {
+            background: var(--gold-soft);
+            color: var(--primary-maroon);
+            transform: translateX(5px);
+        }
 
-    .sidebar ul {
-      padding: 0;
-      list-style: none;
-    }
+        .sidebar ul li a.active-1 {
+            background: var(--primary-maroon);
+            color: #fff !important;
+            box-shadow: 0 8px 20px rgba(99, 25, 27, 0.2);
+        }
 
-    .sidebar ul li a {
-      padding: 12px 25px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      color: #666;
-      text-decoration: none;
-      font-weight: 500;
-      margin: 4px 15px;
-      border-radius: 12px;
-      transition: var(--transition);
-    }
+        /* --- Content & Cards --- */
+        .content-wrapper {
+            margin-left: 300px;
+            padding: 50px;
+            transition: var(--transition);
+        }
 
-    .sidebar ul li a:hover,
-    .sidebar ul li a.active-1 {
-      background: var(--soft-gold);
-      color: var(--primary-maroon);
-    }
+        .page-title {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-maroon);
+            font-weight: 700;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
+        }
 
-    .sidebar ul li a.active-1 {
-      background: var(--primary-maroon);
-      color: #fff !important;
-    }
+        .settings-container { max-width: 900px; margin: 0 auto; }
 
-    /* --- CONTENT AREA --- */
-    .content {
-      margin-left: 280px;
-      padding: 30px;
-      transition: var(--transition);
-    }
+        .settings-card {
+            background: #fff;
+            border-radius: 24px;
+            border: 1px solid rgba(176, 141, 87, 0.08);
+            padding: 25px 30px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            cursor: pointer;
+            box-shadow: var(--shadow-sm);
+        }
 
-    .page-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary-maroon);
-    }
+        .settings-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--gold-accent);
+        }
 
-    /* --- ORDER CARD ENHANCEMENTS --- */
-    .order-card {
-      background: #fff;
-      border-radius: 15px;
-      border: 1px solid #eee;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
+        .icon-box {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            background: var(--gold-soft);
+            color: var(--primary-maroon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-right: 25px;
+            transition: var(--transition);
+        }
 
-    .product-row {
-      padding: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        .settings-card:hover .icon-box {
+            background: var(--primary-maroon);
+            color: #fff;
+        }
 
-    .product-img img {
-      width: 100px;
-      height: 100px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
+        /* --- Custom Inputs & Switches --- */
+        .form-switch .form-check-input {
+            width: 3em;
+            height: 1.5em;
+            cursor: pointer;
+        }
+        .form-switch .form-check-input:checked {
+            background-color: var(--primary-maroon);
+            border-color: var(--primary-maroon);
+        }
 
-    .action-btns {
-      margin-left: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
+        /* --- Modals --- */
+        .modal-content { 
+            border-radius: 30px; 
+            border: none; 
+            box-shadow: 0 25px 80px rgba(0,0,0,0.2);
+        }
+        .modal-header { 
+            background: var(--primary-maroon); 
+            color: white; 
+            padding: 30px; 
+            border: none;
+        }
+        .btn-update {
+            background: linear-gradient(135deg, var(--gold-accent), var(--gold-light));
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        .btn-update:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(176, 141, 87, 0.3);
+            color: white;
+        }
 
-    /* --- MOBILE OVERRIDES --- */
-    @media (max-width: 992px) {
-      .sidebar {
-        transform: translateX(-100%);
-        padding-top: 40px;
-      }
+        /* --- Mobile Responsive --- */
+        @media (max-width: 992px) {
+            .sidebar { transform: translateX(-100%); width: 280px; }
+            .sidebar.active { transform: translateX(0); }
+            .content-wrapper { margin-left: 0; padding: 30px 20px; }
+            .overlay {
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.5); z-index: 999; display: none;
+                backdrop-filter: blur(4px);
+            }
+            .overlay.active { display: block; }
+            .page-title { font-size: 2.2rem; }
 
-      .sidebar.active {
-        transform: translateX(0);
-      }
-
-      .content {
-        margin-left: 0;
-        padding: 20px 15px;
-        padding-bottom: 80px;
-        /* Space for bottom nav */
-      }
-
-      .action-btns {
-        margin-left: 0;
-        width: 100%;
-        flex-direction: row;
-      }
-
-      .btn-luxury,
-      .btn-outline-luxury {
-        flex: 1;
-        text-align: center;
-        padding: 10px 10px;
-        font-size: 0.75rem;
-      }
-
-      .filter-tabs {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding-bottom: 5px;
-      }
-
-      .product-row {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-    }
-
-    /* Bottom Navigation for Mobile */
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      background: #fff;
-      display: none;
-      justify-content: space-around;
-      padding: 10px 0;
-      border-top: 1px solid #eee;
-      z-index: 1100;
-    }
-
-    @media (max-width: 992px) {
-      .bottom-nav {
-        display: flex;
-      }
-
-      .header .search-area {
-        display: none !important;
-      }
-    }
-
-    .bottom-nav-item {
-      text-align: center;
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.7rem;
-    }
-
-    .bottom-nav-item i {
-      font-size: 1.2rem;
-      display: block;
-    }
-
-    .bottom-nav-item.active {
-      color: var(--primary-maroon);
-    }
-
-    .status-badge {
-      font-size: 0.7rem;
-      padding: 4px 10px;
-      border-radius: 20px;
-    }
-
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1045;
-      display: none;
-    }
-
-    .overlay.active {
-      display: block;
-    }
-  </style>
+            .res-tab{
+              display: none;
+            }
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="overlay" onclick="toggleSidebar()"></div>
+    <div class="overlay" onclick="toggleSidebar()"></div>
 
-  <header class="header">
-    <div class="navbar-custom">
-      <div class="d-flex align-items-center">
-        <button class="btn d-lg-none me-2" onclick="toggleSidebar()">
-          <i class="bi bi-list fs-3"></i>
-        </button>
-        <img src="assests/images/logo.svg" height="30" alt="Tanishq">
-      </div>
-
-      <div class="search-area d-none d-lg-flex">
-        <i class="bi bi-search"></i>
-        <input type="search" placeholder="Search jewellery...">
-      </div>
-
-      <div class="d-flex gap-3 align-items-center">
-        <a href="#" class="text-dark d-none d-md-block"><i class="bi bi-heart fs-5"></i></a>
-        <a href="#" class="text-dark"><i class="bi bi-cart fs-5"></i></a>
-        <a href="user-profile.html" class="text-dark"><i class="bi bi-person-circle fs-5"></i></a>
-      </div>
-    </div>
-  </header>
-
-  <aside class="sidebar" id="sidebar">
-    <div class="profile">
-      <img src="assests/images/jewellery-care-guide.webp" alt="User">
-      <h5 class="mt-2 fw-bold">Mo Saleem</h5>
-      <span class="badge rounded-pill bg-light text-dark border">Elite Member</span>
-    </div>
-    <ul>
-
-      <li><a href="user-profile.html" class="active-1"><i class="bi bi-person"></i> Profile</a></li>
-      <li><a href="User-order.html"><i class="bi bi-box"></i> Orders</a></li>
-      <li><a href="User-wishlist.html"><i class="bi bi-heart"></i> Wishlist</a></li>
-      <li><a href="User-address.html"><i class="bi bi-geo-alt"></i> Address</a></li>
-      <li><a href="User-Track.html"><i class="bi bi-box2"></i> Track Product</a></li>
-      <li><a href="User-Return.html"><i class="bi bi-arrow-return-left"></i> Return Product</a></li>
-      <li><a href="User-Setting.html"><i class="bi bi-gear"></i> Settings</a></li>
-      <li><a href="index.html" class="mt-4 text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
-    </ul>
-  </aside>
-
-  <main class="content">
-    <div class="container-fluid">
-      <div class="page-header mb-4">
-        <p class="mb-1">Account Settings</p>
-        <h1>User Profile</h1>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-12 col-xl-5">
-          <div class="order-card p-4 h-100 text-center">
-            <div class="position-relative d-inline-block mb-3">
-              <img src="assests/images/modern-minimal.webp" height="130" width="130" class="shadow-sm"
-                style="border-radius: 30px; border: 4px solid var(--soft-gold); object-fit: cover;">
-              <span class="position-absolute bottom-0 end-0 badge rounded-circle bg-success p-2"
-                style="border: 3px solid #fff;" title="Online"></span>
-            </div>
-
-            <h2 class="fw-bold mb-1" style="font-family: 'Playfair Display', serif;">Mo Saleem</h2>
-            <p class="text-muted mb-4"><i class="bi bi-envelope me-2"></i>saleem@gmail.com</p>
-
-            <div class="d-flex justify-content-around align-items-center py-3 bg-light rounded-4">
-              <div>
-                <h4 class="fw-bold mb-0 text-maroon">8</h4>
-                <p class="small text-muted mb-0">Wishlist</p>
-              </div>
-              <div class="vr opacity-10"></div>
-              <div>
-                <h4 class="fw-bold mb-0 text-maroon">6</h4>
-                <p class="small text-muted mb-0">Orders</p>
-              </div>
-              <div class="vr opacity-10"></div>
-              <div>
-                <h4 class="fw-bold mb-0 text-maroon">2</h4>
-                <p class="small text-muted mb-0">Addresses</p>
-              </div>
-            </div>
-
-            <div class="mt-4 pt-2 border-top">
-              <p class="small text-muted">Member since January 2024</p>
-            </div>
-          </div>
+    <header class="luxury-header fixed-top d-flex align-items-center px-4 justify-content-between">
+        <div class="d-flex align-items-center">
+            <button class="btn d-lg-none me-3" onclick="toggleSidebar()">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+            <img src="assests/images/logo.svg" height="40" alt="Tanishq">
         </div>
-
-        <div class="col-12 col-xl-7">
-          <div class="order-card p-4 h-100">
-            <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom">
-              <h5 class="fw-bold m-0" style="font-family: 'Playfair Display', serif; color: var(--primary-maroon);">
-                Personal Details</h5>
-              <span class="badge bg-success-subtle text-success border border-success px-3 py-2 rounded-pill small">
-                <i class="bi bi-patch-check-fill me-1"></i> VERIFIED
-              </span>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between p-3 rounded-4 mb-4"
-              style="background-color: var(--soft-gold); border: 1px dashed var(--gold-accent);">
-              <div class="d-flex align-items-center gap-3">
-                <img src="assests/images/floral-bloom.webp" width="55" height="55"
-                  style="border-radius:12px; object-fit: cover; border: 2px solid #fff;">
-                <div>
-                  <span class="d-block small fw-bold text-dark">Profile Photo</span>
-                  <span class="text-muted" style="font-size: 0.75rem;">JPG, PNG or WEBP</span>
-                </div>
-              </div>
-              <button class="btn btn-sm btn-light border shadow-sm rounded-pill px-3">
-                <i class="bi bi-camera me-1"></i> Change
-              </button>
-            </div>
-
-            <form class="row g-4">
-              <div class="col-md-6">
-                <label class="form-label small fw-bold text-muted">Full Name</label>
-                <input type="text" class="form-control border-0 bg-light p-3 rounded-3" value="Mo Saleem">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small fw-bold text-muted">Email Address</label>
-                <input type="email" class="form-control border-0 bg-light p-3 rounded-3" value="saleem@gmail.com">
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small fw-bold text-muted">Phone Number</label>
-                <div class="input-group">
-                  <span class="input-group-text border-0 bg-light rounded-start-3">+91</span>
-                  <input type="text" class="form-control border-0 bg-light p-3 rounded-end-3" value="9137497814">
-                </div>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label small fw-bold text-muted">City</label>
-                <input type="text" class="form-control border-0 bg-light p-3 rounded-3" value="Lucknow">
-              </div>
-
-              <div class="col-12 text-end mt-5">
-                <button type="button" class="btn btn-outline-luxury me-2 rounded-pill px-4 shadow-lg">Discard</button>
-                <button type="submit" class=" btn btn-luxury rounded-pill px-5 shadow-lg">Save Changes</button>
-              </div>
-            </form>
-          </div>
+        <div class="d-flex gap-4 align-items-center">
+            <a href="#" class="text-dark d-none d-md-block"><i class="bi bi-search fs-5"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-bag-heart fs-5"></i></a>
+            <a href="#" class="text-dark"><i class="bi bi-person-circle fs-5"></i></a>
         </div>
-      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="profile text-center px-4">
+            <img src="assests/images/floral-bloom-desktop.webp" alt="Profile">
+            <h3 class="mt-2 fs-5 fw-bold mb-0">Mo Saleem</h3>
+            <p class="text-muted small">Gold Member</p>
+        </div>
+        <ul class="mt-3">
+            <div class="res-tab">
+                <li><a href="user-profile.html"><i class="bi bi-person"></i> Profile</a></li>
+                <li><a href="User-order.html"><i class="bi bi-box"></i> Orders</a></li>
+                <li><a href="User-wishlist.html"><i class="bi bi-heart"></i> Wishlist</a></li>
+            </div>
+            <li><a href="User-address.html"><i class="bi bi-geo-alt"></i> Address</a></li>
+            <li><a href="User-Return.html"><i class="bi bi-arrow-counterclockwise"></i> Return Product</a></li>
+            <li><a href="User-Track.html" ><i class="bi bi-box2"></i> Track Product</a></li>
+            <li><a href="User-Setting.html" class="active-1"><i class="bi bi-gear"></i> Settings</a></li>
+            <li><hr class="mx-4 my-3 opacity-10"></li>
+            <li><a href="index.html" class="text-danger"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+        </ul>
+    </aside>
+
+    <main class="content-wrapper">
+        <div class="settings-container">
+            <div class="mb-5 animate__animated animate__fadeIn">
+                <h1 class="page-title">Settings</h1>
+                <p class="text-muted fs-5">Manage your security, notifications, and account privacy.</p>
+            </div>
+
+            <h5 class="fw-bold mb-4 opacity-75 text-uppercase small letter-spacing-1">Security & Access</h5>
+            
+            <div class="settings-card" data-bs-toggle="modal" data-bs-target="#passwordModal">
+                <div class="d-flex align-items-center">
+                    <div class="icon-box"><i class="bi bi-shield-lock"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-bold fs-5">Login Password</h6>
+                        <small class="text-muted">Last changed 3 months ago</small>
+                    </div>
+                </div>
+                <i class="bi bi-chevron-right text-muted fs-5"></i>
+            </div>
+
+            <div class="settings-card">
+                <div class="d-flex align-items-center">
+                    <div class="icon-box"><i class="bi bi-phone"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-bold fs-5">Two-Step Verification</h6>
+                        <small class="text-muted">Secure your account with OTP</small>
+                    </div>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" checked>
+                </div>
+            </div>
+
+            <h5 class="fw-bold mb-4 mt-5 opacity-75 text-uppercase small letter-spacing-1 text-danger">Danger Zone</h5>
+
+            <div class="settings-card border-danger-subtle" data-bs-toggle="modal" data-bs-target="#deleteModal" style="background: #fffafa;">
+                <div class="d-flex align-items-center">
+                    <div class="icon-box" style="background: #ffe5e5; color: #d63031;"><i class="bi bi-trash3"></i></div>
+                    <div>
+                        <h6 class="mb-0 fw-bold text-danger fs-5">Delete Account</h6>
+                        <small class="text-muted">Permanently erase your data and history</small>
+                    </div>
+                </div>
+                <i class="bi bi-chevron-right text-danger fs-5"></i>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="passwordModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold"><i class="bi bi-lock me-2"></i>Change Password</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Current Password</label>
+                            <input type="password" class="form-control form-control-lg border-0 bg-light shadow-none" placeholder="Enter current password">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-uppercase text-muted">New Password</label>
+                            <input type="password" class="form-control form-control-lg border-0 bg-light shadow-none" placeholder="Enter new password">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label small fw-bold text-uppercase text-muted">Confirm Password</label>
+                            <input type="password" class="form-control form-control-lg border-0 bg-light shadow-none" placeholder="Re-type new password">
+                        </div>
+                        <button type="button" class="btn btn-update w-100 shadow-sm py-3">Update Credentials</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <nav class="bottom-nav">
-    <a href="#" class="bottom-nav-item"><i class="bi bi-house"></i>Home</a>
-    <a href="#" class="bottom-nav-item active"><i class="bi bi-box"></i>Orders</a>
-    <a href="#" class="bottom-nav-item"><i class="bi bi-heart"></i>Wishlist</a>
-    <a href="#" class="bottom-nav-item"><i class="bi bi-person"></i>Profile</a>
-  </nav>
+    <div class="modal fade" id="deleteModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body p-5 text-center">
+                    <div class="mb-4">
+                        <i class="bi bi-exclamation-octagon text-danger" style="font-size: 5rem;"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Wait, Mo Saleem!</h3>
+                    <p class="text-muted mb-4 px-3">By deleting your account, you will lose all your accumulated Gold Points and exclusive Tanishq membership benefits.</p>
+                    <div class="d-grid gap-3">
+                        <button class="btn btn-danger py-3 fw-bold rounded-4" type="button">Delete My Account</button>
+                        <button class="btn btn-light py-3 fw-medium rounded-4" type="button" data-bs-dismiss="modal">I've Changed My Mind</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("active");
-      document.querySelector(".overlay").classList.toggle("active");
-    }
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.querySelector(".overlay").classList.toggle("active");
+        }
+    </script>
 </body>
-
 </html>
