@@ -245,10 +245,15 @@ h1 {
 
 .btn {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 0;
     text-decoration: none;
     color: black;
     border-bottom: 1px solid black;
+}
+.container-1{
+    display: flex;
+    align-items: center;
+    gap: 50px;
 }
 
 .arrows {
@@ -298,11 +303,6 @@ h1 {
     background-color: var(--color-grey1);
 }
 
-.container {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-}
 
 /* LEFT */
 .left-2 {
@@ -400,14 +400,14 @@ ul li::before {
 
 .btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 10px;
     text-decoration: none;
     color: black;
     border-bottom: 1px solid black;
 }
 
 @media (max-width: 992px) {
-    .container {
+    .container-1 {
         flex-direction: column;
     }
 
