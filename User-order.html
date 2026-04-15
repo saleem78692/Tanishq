@@ -68,18 +68,30 @@
             font-size: 0.85rem;
         }
 
-        /* --- SIDEBAR --- */
+        /* --- SIDEBAR REFINED & SCROLLABLE --- */
         .sidebar {
             width: 280px;
             height: 100vh;
-            background: #fff;
+            background: #ffffff;
             position: fixed;
             top: 0;
             left: 0;
-            padding-top: 80px;
-            border-right: 1px solid #f0f0f0;
+            padding-top: 85px;
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
             z-index: 1050;
             transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+         .sidebar::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: #e0e0e0;
+            border-radius: 10px;
         }
 
         .sidebar .profile {
